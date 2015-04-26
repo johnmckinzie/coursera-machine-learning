@@ -92,7 +92,7 @@ modRF <- randomForest(classe ~ ., data=trainingData)
 print(modRF)
 ```
 
-The out-of-bag (OOB) error, which is similar to out-of-sample error for when bagging, for this model was 0.27%. This led
+The out-of-bag (OOB) error, which is similar to out-of-sample error for when bagging, was 0.27%. This led
 me to believe this model would be very accurate when applied to our test partition.
 
 ```{r, cache=TRUE}
@@ -106,7 +106,7 @@ plot(confRF[[2]], main="Confusion Matrix for the Random Forest Tree")
 ```
 
 The confusion matrix for the model and test data showed the model was 100% accurate in classifying the test 
-partition of the test data.
+partition of the training data.
 
 ## Random Forest Trees with PCA
 
